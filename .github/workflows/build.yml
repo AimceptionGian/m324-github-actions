@@ -21,3 +21,11 @@ jobs:
 
       - name: debug build folder
         run: ls -la
+
+      - name: setup-node
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18"
+          cache: "npm"
+        run: npm install
+        run: npm test
