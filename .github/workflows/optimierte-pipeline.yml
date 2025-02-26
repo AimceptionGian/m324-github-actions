@@ -24,13 +24,19 @@ jobs:
       - name: build the app
         run: npm run build
 
+      - name: upload build-artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: build-artifact
+          path: build-artifact
+
   test:
     runs-on: ubuntu-22.04
 
     needs: build
     steps:
-      - name: debug
-        run: ls -la
+      - name: download build-artifact
+        run: ls -R
 
       - name: Run tests
         run: npm run test
