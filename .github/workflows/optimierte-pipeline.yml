@@ -29,6 +29,9 @@ jobs:
 
     needs: build
     steps:
+      - name: debug
+        run: ls -la
+
       - name: Run tests
         run: npm run test
 
@@ -40,7 +43,6 @@ jobs:
       - name: Lint code
         run: |
           echo "linter running"
-          npm lint --version
           npm run lint
 
   deploy:
