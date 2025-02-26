@@ -45,7 +45,7 @@ jobs:
         run: ls -la
 
       - name: Run tests
-        run: npm run test
+        run: npm run test --silent
 
   lint:
     runs-on: ubuntu-22.04
