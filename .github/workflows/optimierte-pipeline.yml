@@ -41,6 +41,9 @@ jobs:
           name: build-artifact
           path: .
 
+      - name: debug
+        run: ls -la
+
       - name: Run tests
         run: npm run test
 
