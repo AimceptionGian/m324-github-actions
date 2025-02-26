@@ -40,7 +40,7 @@ jobs:
       - name: Lint code
         run: |
           echo "linter running"
-          lint --version
+          npm lint --version
           npm run lint
 
   deploy:
