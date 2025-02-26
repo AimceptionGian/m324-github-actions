@@ -37,7 +37,9 @@ jobs:
     steps:
       - name: download build-artifact
         uses: actions/download-artifact@v4
-        run: ls -R
+        with:
+          name: build-artifact
+          path: build-artifact
 
       - name: Run tests
         run: npm run test
