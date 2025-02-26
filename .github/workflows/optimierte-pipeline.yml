@@ -50,7 +50,7 @@ jobs:
         run: ls -la
 
       - name: Run tests
-        run: CI=true npm run test
+        run: CI=true npx react-scripts test
 
   lint:
     runs-on: ubuntu-22.04
