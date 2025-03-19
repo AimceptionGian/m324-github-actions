@@ -50,7 +50,7 @@ jobs:
         run: ls -la
 
       - name: Run tests
-        run: npm list react-scripts
+        run: npm run test
 
   lint:
     runs-on: ubuntu-22.04
